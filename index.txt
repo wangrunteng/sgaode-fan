@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安徽斯高德农业科技有限公司 - 家禽风机产品展示</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        'primary-dark': '#1e3a8a',
+                        secondary: '#0ea5e9',
+                        accent: '#f59e0b',
+                        light: '#f8fafc',
+                        dark: '#1e293b',
+                        gray: '#64748b',
+                        success: '#10b981'
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --primary: #1e40af;
+            --primary-dark: #1e3a8a;
+            --secondary: #0ea5e9;
+            --accent: #f59e0b;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --success: '#10b981';
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: linear-gradient(to bottom, #f0f9ff, #ffffff);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .product-image {
+            transition: transform 0.5s ease;
+            filter: brightness(0.95) contrast(1.05) saturate(1.1);
+        }
+        
+        .product-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .inquiry-item {
+            transition: all 0.3s ease;
+        }
+        
+        .inquiry-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- 导航栏 -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-fan text-blue-500 text-2xl"></i>
+                    <span class="text-xl font-bold text-blue-700">安徽斯高德农业科技有限公司</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">首页</a>
+                    <a href="#products" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">产品中心</a>
+                    <a href="#specs" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">技术参数</a>
+                    <a href="#inquiry" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">在线询价</a>
+                    <a href="#inquiries" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">询价记录</a>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="tel:13515577161" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors flex items-center">
+                        <i class="fas fa-phone mr-2"></i> 13515577161
+                    </a>
+                    <button class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 联系信息横幅 -->
+    <div class="bg-blue-800 text-white py-2">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-2 md:mb-0">
+                    <i class="fas fa-building mr-2"></i>
+                    <span>安徽斯高德农业科技有限公司</span>
+                </div>
+                <div class="flex items-center mb-2 md:mb-0">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span>皖江江北新兴产业集中区楚江大道9号芜湖建筑科技产业园A区1113-02号</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span>联系电话: 13515577161</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="py-20 md:py-28 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 fade-in">斯高德家禽风机</h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-10 fade-in">高效能通风解决方案，为现代化养殖场提供最佳环境控制</p>
+                <a href="#inquiry" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg fade-in">立即询价</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品中心 -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">产品中心</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 产品1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl fade-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                        <div class="text-white text-center p-4">
+                            <i class="fas fa-fan text-6xl mb-4"></i>
+                            <h3 class="text-xl font-bold">HGP-504-33</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">高效能版家禽风机，适用于各种规模的养殖场</p>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span><i class="fas fa-weight-hanging mr-1"></i> ≈96kg</span>
+                            <span><i class="fas fa-bolt mr-1"></i> 1.1KW</span>
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 44900 m³/h</span>
+                        </div>
+                        <button class="w-full bg-blue-100 text-blue-700 py-2 rounded-lg font-medium hover:bg-blue-200 transition-colors view-details" data-product="HGP-504-33">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- 产品2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl fade-in">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 flex items-center justify-center">
+                        <div class="text-white text-center p-4">
+                            <i class="fas fa-fan text-6xl mb-4"></i>
+                            <h3 class="text-xl font-bold">HGF-50-HO</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">高风量版本，适用于大型养殖场和高温环境</p>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span><i class="fas fa-weight-hanging mr-1"></i> ≈98kg</span>
+                            <span><i class="fas fa-bolt mr-1"></i> 1.5KW</span>
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 50600 m³/h</span>
+                        </div>
+                        <button class="w-full bg-green-100 text-green-700 py-2 rounded-lg font-medium hover:bg-green-200 transition-colors view-details" data-product="HGF-50-HO">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- 产品3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl fade-in">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                        <div class="text-white text-center p-4">
+                            <i class="fas fa-fan text-6xl mb-4"></i>
+                            <h3 class="text-xl font-bold">HGF-50A-HPE(EC)</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">EC节能版本，高效能比，适用于节能要求高的场所</p>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span><i class="fas fa-weight-hanging mr-1"></i> ≈95kg</span>
+                            <span><i class="fas fa-bolt mr-1"></i> 1.5KW</span>
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 51000 m³/h</span>
+                        </div>
+                        <button class="w-full bg-purple-100 text-purple-700 py-2 rounded-lg font-medium hover:bg-purple-200 transition-colors view-details" data-product="HGF-50A-HPE(EC)">查看详情</button>
+                    </div>
+                </div>
+                
+                <!-- 产品4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl fade-in">
+                    <div class="h-48 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+                        <div class="text-white text-center p-4">
+                            <i class="fas fa-fan text-6xl mb-4"></i>
+                            <h3 class="text-xl font-bold">HGP-504-EC</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">EC节能版本，高能效比，经济实用</p>
+                        <div class="flex justify-between text-sm text-gray-500 mb-4">
+                            <span><i class="fas fa-weight-hanging mr-1"></i> ≈96kg</span>
+                            <span><i class="fas fa-bolt mr-1"></i> 1.1KW</span>
+                            <span><i class="fas fa-tachometer-alt mr-1"></i> 42300 m³/h</span>
+                        </div>
+                        <button class="w-full bg-amber-100 text-amber-700 py-2 rounded-lg font-medium hover:bg-amber-200 transition-colors view-details" data-product="HGP-504-EC">查看详情</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品详情与技术参数 -->
+    <section id="specs" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">产品详情与技术参数</h2>
+            
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <!-- 产品选择标签 -->
+                <div class="flex flex-wrap border-b">
+                    <button class="product-tab py-4 px-6 font-medium text-gray-600 border-b-2 border-transparent hover:text-blue-600 transition-colors active" data-product="HGP-504-33">HGP-504-33</button>
+                    <button class="product-tab py-4 px-6 font-medium text-gray-600 border-b-2 border-transparent hover:text-blue-600 transition-colors" data-product="HGF-50-HO">HGF-50-HO</button>
+                    <button class="product-tab py-4 px-6 font-medium text-gray-600 border-b-2 border-transparent hover:text-blue-600 transition-colors" data-product="HGF-50A-HPE(EC)">HGF-50A-HPE(EC)</button>
+                    <button class="product-tab py-4 px-6 font-medium text-gray-600 border-b-2 border-transparent hover:text-blue-600 transition-colors" data-product="HGP-504-EC">HGP-504-EC</button>
+                </div>
+                
+                <!-- 产品详情内容 -->
+                <div class="p-8">
+                    <!-- HGP-504-33 内容 -->
+                    <div class="product-content" id="HGP-504-33">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">HGP-504-33 技术参数</h3>
+                                <div class="mb-6">
+                                    <h4 class="text-lg font-semibold mb-2">基本参数</h4>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">型号</span>
+                                            <span class="font-semibold">HGP-504-33</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">整机重量</span>
+                                            <span class="font-semibold">≈96kg</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定功率</span>
+                                            <span class="font-semibold">1.1KW</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定电压/频率</span>
+                                            <span class="font-semibold">三相380V，50HZ</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定电流</span>
+                                            <span class="font-semibold">3.37A</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">防护等级</span>
+                                            <span class="font-semibold">IP56</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">驱动方式</span>
+                                            <span class="font-semibold">电机直驱驱动</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-2">性能参数</h4>
+                                    <div class="overflow-x-auto">
+                                        <table class="w-full">
+                                            <thead>
+                                                <tr class="bg-gray-100">
+                                                    <th class="px-4 py-2 text-left">静压值</th>
+                                                    <th class="px-4 py-2 text-left">风量 (m³/h)</th>
+                                                    <th class="px-4 py-2 text-left">能效比</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">0 Pa</td>
+                                                    <td class="px-4 py-3">44900</td>
+                                                    <td class="px-4 py-3">40.6</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-12Pa</td>
+                                                    <td class="px-4 py-3">42600</td>
+                                                    <td class="px-4 py-3">36.1</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-25Pa</td>
+                                                    <td class="px-4 py-3">40100</td>
+                                                    <td class="px-4 py-3">31.9</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-37Pa</td>
+                                                    <td class="px-4 py-3">37500</td>
+                                                    <td class="px-4 py-3">28.5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-4 py-3">-50Pa</td>
+                                                    <td class="px-4 py-3">34900</td>
+                                                    <td class="px-4 py-3">25.4</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="w-full h-64 md:h-80 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 product-image">
+                                    <div class="text-white text-center">
+                                        <i class="fas fa-fan text-8xl mb-4"></i>
+                                        <p class="text-xl font-bold">HGP-504-33</p>
+                                        <p class="mt-2">高效能版家禽风机</p>
+                                    </div>
+                                </div>
+                                <button class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors mt-4 inquiry-btn" data-product="HGP-504-33">立即询价</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- HGF-50-HO 内容 -->
+                    <div class="product-content hidden" id="HGF-50-HO">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">HGF-50-HO 技术参数</h3>
+                                <div class="mb-6">
+                                    <h4 class="text-lg font-semibold mb-2">基本参数</h4>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">型号</span>
+                                            <span class="font-semibold">HGF-50-HO</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">整机重量</span>
+                                            <span class="font-semibold">≈98kg</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定功率</span>
+                                            <span class="font-semibold">1.5KW</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定电压/频率</span>
+                                            <span class="font-semibold">三相380V，50HZ</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定电流</span>
+                                            <span class="font-semibold">4.4A</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">防护等级</span>
+                                            <span class="font-semibold">IP56</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">驱动方式</span>
+                                            <span class="font-semibold">电机直驱驱动</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-2">性能参数</h4>
+                                    <div class="overflow-x-auto">
+                                        <table class="w-full">
+                                            <thead>
+                                                <tr class="bg-gray-100">
+                                                    <th class="px-4 py-2 text-left">静压值</th>
+                                                    <th class="px-4 py-2 text-left">风量 (m³/h)</th>
+                                                    <th class="px-4 py-2 text-left">能效比</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">0 Pa</td>
+                                                    <td class="px-4 py-3">50600</td>
+                                                    <td class="px-4 py-3">32.9</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-12Pa</td>
+                                                    <td class="px-4 py-3">48500</td>
+                                                    <td class="px-4 py-3">29.7</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-22Pa</td>
+                                                    <td class="px-4 py-3">46300</td>
+                                                    <td class="px-4 py-3">27.3</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-44Pa</td>
+                                                    <td class="px-4 py-3">41900</td>
+                                                    <td class="px-4 py-3">23.3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-4 py-3">-54Pa</td>
+                                                    <td class="px-4 py-3">39700</td>
+                                                    <td class="px-4 py-3">21.6</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="w-full h-64 md:h-80 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 product-image">
+                                    <div class="text-white text-center">
+                                        <i class="fas fa-fan text-8xl mb-4"></i>
+                                        <p class="text-xl font-bold">HGF-50-HO</p>
+                                        <p class="mt-2">高风量版本家禽风机</p>
+                                    </div>
+                                </div>
+                                <button class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors mt-4 inquiry-btn" data-product="HGF-50-HO">立即询价</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- HGF-50A-HPE(EC) 内容 -->
+                    <div class="product-content hidden" id="HGF-50A-HPE(EC)">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">HGF-50A-HPE(EC) 技术参数</h3>
+                                <div class="mb-6">
+                                    <h4 class="text-lg font-semibold mb-2">基本参数</h4>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">型号</span>
+                                            <span class="font-semibold">HGF-50A-HPE(EC)</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">整机重量</span>
+                                            <span class="font-semibold">≈95kg</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定功率</span>
+                                            <span class="font-semibold">1.5KW</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定电压/频率</span>
+                                            <span class="font-semibold">三相380V，50HZ</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定电流</span>
+                                            <span class="font-semibold">3.0A</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">防护等级</span>
+                                            <span class="font-semibold">IP66</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">驱动方式</span>
+                                            <span class="font-semibold">电机直驱驱动</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">电机品牌</span>
+                                            <span class="font-semibold">卧龙/势柜/雷勃</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">电机轴承品牌</span>
+                                            <span class="font-semibold">NSK</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-2">性能参数</h4>
+                                    <div class="overflow-x-auto">
+                                        <table class="w-full">
+                                            <thead>
+                                                <tr class="bg-gray-100">
+                                                    <th class="px-4 py-2 text-left">静压值</th>
+                                                    <th class="px-4 py-2 text-left">风量 (m³/h)</th>
+                                                    <th class="px-4 py-2 text-left">能效比</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">0 Pa</td>
+                                                    <td class="px-4 py-3">51000</td>
+                                                    <td class="px-4 py-3">38.0</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-12Pa</td>
+                                                    <td class="px-4 py-3">48900</td>
+                                                    <td class="px-4 py-3">34.0</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-25Pa</td>
+                                                    <td class="px-4 py-3">45700</td>
+                                                    <td class="px-4 py-3">28.9</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-41Pa</td>
+                                                    <td class="px-4 py-3">43400</td>
+                                                    <td class="px-4 py-3">26.3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-4 py-3">-59Pa</td>
+                                                    <td class="px-4 py-3">40100</td>
+                                                    <td class="px-4 py-3">23.2</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="w-full h-64 md:h-80 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 product-image">
+                                    <div class="text-white text-center">
+                                        <i class="fas fa-fan text-8xl mb-4"></i>
+                                        <p class="text-xl font-bold">HGF-50A-HPE(EC)</p>
+                                        <p class="mt-2">EC节能版本家禽风机</p>
+                                    </div>
+                                </div>
+                                <button class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors mt-4 inquiry-btn" data-product="HGF-50A-HPE(EC)">立即询价</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- HGP-504-EC 内容 -->
+                    <div class="product-content hidden" id="HGP-504-EC">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">HGP-504-EC 技术参数</h3>
+                                <div class="mb-6">
+                                    <h4 class="text-lg font-semibold mb-2">基本参数</h4>
+                                    <div class="space-y-2">
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">型号</span>
+                                            <span class="font-semibold">HGP-504-EC</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">整机重量</span>
+                                            <span class="font-semibold">≈96kg</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定功率</span>
+                                            <span class="font-semibold">1.1KW</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定电压/频率</span>
+                                            <span class="font-semibold">三相380V，50HZ</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">额定电流</span>
+                                            <span class="font-semibold">2.7A</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">防护等级</span>
+                                            <span class="font-semibold">IP66</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">驱动方式</span>
+                                            <span class="font-semibold">电机直联驱动</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">电机品牌</span>
+                                            <span class="font-semibold">卧龙/势拓/雷勃</span>
+                                        </div>
+                                        <div class="flex justify-between border-b pb-2">
+                                            <span class="text-gray-600">电机轴承品牌</span>
+                                            <span class="font-semibold">NSK</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-2">性能参数</h4>
+                                    <div class="overflow-x-auto">
+                                        <table class="w-full">
+                                            <thead>
+                                                <tr class="bg-gray-100">
+                                                    <th class="px-4 py-2 text-left">静压值</th>
+                                                    <th class="px-4 py-2 text-left">风量 (m³/h)</th>
+                                                    <th class="px-4 py-2 text-left">能效比</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">0 Pa</td>
+                                                    <td class="px-4 py-3">42300</td>
+                                                    <td class="px-4 py-3">42.1</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-12Pa</td>
+                                                    <td class="px-4 py-3">40350</td>
+                                                    <td class="px-4 py-3">37.5</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-25Pa</td>
+                                                    <td class="px-4 py-3">38500</td>
+                                                    <td class="px-4 py-3">32.7</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td class="px-4 py-3">-37Pa</td>
+                                                    <td class="px-4 py-3">36000</td>
+                                                    <td class="px-4 py-3">29.2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="px-4 py-3">-50Pa</td>
+                                                    <td class="px-4 py-3">34000</td>
+                                                    <td class="px-4 py-3">25.9</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-col items-center justify-center">
+                                <div class="w-full h-64 md:h-80 bg-gradient-to-br from-amber-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 product-image">
+                                    <div class="text-white text-center">
+                                        <i class="fas fa-fan text-8xl mb-4"></i>
+                                        <p class="text-xl font-bold">HGP-504-EC</p>
+                                        <p class="mt-2">EC节能版本家禽风机</p>
+                                    </div>
+                                </div>
+                                <button class="w-full bg-amber-600 text-white py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors mt-4 inquiry-btn" data-product="HGP-504-EC">立即询价</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 询价表单 -->
+    <section id="inquiry" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">在线询价</h2>
+            
+            <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-2xl shadow-lg fade-in">
+                <form id="inquiry-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" for="name">姓名</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" for="company">公司名称</label>
+                            <input type="text" id="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" for="phone">联系电话</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2" for="email">电子邮箱</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-medium mb-2" for="product">感兴趣的产品型号</label>
+                        <select id="product" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="HGP-504-33">HGP-504-33</option>
+                            <option value="HGF-50-HO">HGF-50-HO</option>
+                            <option value="HGF-50A-HPE(EC)">HGF-50A-HPE(EC)</option>
+                            <option value="HGP-504-EC">HGP-504-EC</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block text-gray-700 font-medium mb-2" for="message">具体需求</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="请描述您的具体需求，如应用场景、数量等"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">提交询价</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 询价记录 -->
+    <section id="inquiries" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 fade-in">询价记录</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-in">
+                    <div class="p-6 border-b">
+                        <h3 class="text-xl font-semibold">客户询价信息</h3>
+                        <p class="text-gray-600 mt-2">以下是客户提交的询价记录，方便您跟进联系</p>
+                    </div>
+                    
+                    <div class="p-6">
+                        <div id="inquiries-list" class="space-y-4">
+                            <!-- 询价记录将在这里动态显示 -->
+                            <div class="text-center py-8 text-gray-500" id="empty-inquiries">
+                                <i class="fas fa-inbox text-4xl mb-4"></i>
+                                <p>暂无询价记录</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">关于我们</h3>
+                    <p class="text-gray-300">安徽斯高德农业科技有限公司致力于为现代化养殖场提供高效能通风解决方案，拥有多年的行业经验和技术积累，产品远销国内外多个国家和地区。</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">联系我们</h3>
+                    <div class="space-y-2 text-gray-300">
+                        <p><i class="fas fa-map-marker-alt mr-2"></i> 皖江江北新兴产业集中区楚江大道9号芜湖建筑科技产业园A区1113-02号</p>
+                        <p><i class="fas fa-phone mr-2"></i> 13515577161</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@highgerman.cn</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">关注我们</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <i class="fab fa-weixin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-500 transition-colors">
+                            <i class="fab fa-weibo"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 安徽斯高德农业科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 页面加载完成后执行
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化滚动动画
+            initScrollAnimations();
+            
+            // 初始化产品切换
+            initProductTabs();
+            
+            // 初始化询价功能
+            initInquiry();
+            
+            // 初始化表单提交
+            initFormSubmission();
+            
+            // 加载询价记录
+            loadInquiries();
+        });
+        
+        // 滚动动画
+        function initScrollAnimations() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+        
+        // 产品标签切换
+        function initProductTabs() {
+            const tabs = document.querySelectorAll('.product-tab');
+            const contents = document.querySelectorAll('.product-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // 移除所有标签的active类
+                    tabs.forEach(t => t.classList.remove('active', 'border-blue-600', 'text-blue-600'));
+                    // 为当前标签添加active类
+                    this.classList.add('active', 'border-blue-600', 'text-blue-600');
+                    
+                    // 隐藏所有内容
+                    contents.forEach(content => content.classList.add('hidden'));
+                    
+                    // 显示对应内容
+                    const productId = this.getAttribute('data-product');
+                    document.getElementById(productId).classList.remove('hidden');
+                    
+                    // 使用GSAP添加动画效果
+                    gsap.from(`#${productId}`, {
+                        duration: 0.5,
+                        opacity: 0,
+                        y: 20,
+                        ease: "power2.out"
+                    });
+                });
+            });
+            
+            // 产品卡片点击事件
+            document.querySelectorAll('.view-details').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = this.getAttribute('data-product');
+                    
+                    // 找到对应标签并点击
+                    document.querySelector(`.product-tab[data-product="${productId}"]`).click();
+                    
+                    // 滚动到产品详情区域
+                    document.getElementById('specs').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        }
+        
+        // 询价功能
+        function initInquiry() {
+            document.querySelectorAll('.inquiry-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = this.getAttribute('data-product');
+                    
+                    // 设置询价表单中的产品选择
+                    document.getElementById('product').value = product;
+                    
+                    // 滚动到询价表单
+                    document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth' });
+                    
+                    // 高亮显示产品选择框
+                    const productSelect = document.getElementById('product');
+                    productSelect.focus();
+                    
+                    // 添加动画效果
+                    gsap.fromTo(productSelect, 
+                        { backgroundColor: '#fef3c7' },
+                        { backgroundColor: '#ffffff', duration: 2, ease: "power2.out" }
+                    );
+                });
+            });
+        }
+        
+        // 表单提交
+        function initFormSubmission() {
+            const form = document.getElementById('inquiry-form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // 获取表单数据
+                const formData = {
+                    name: document.getElementById('name').value,
+                    company: document.getElementById('company').value,
+                    phone: document.getElementById('phone').value,
+                    email: document.getElementById('email').value,
+                    product: document.getElementById('product').value,
+                    message: document.getElementById('message').value,
+                    timestamp: new Date().toLocaleString('zh-CN')
+                };
+                
+                // 保存询价数据到localStorage
+                saveInquiry(formData);
+                
+                // 显示成功消息
+                alert('感谢您的询价！我们会尽快与您联系。');
+                form.reset();
+                
+                // 重新加载询价记录
+                loadInquiries();
+            });
+        }
+        
+        // 保存询价数据到localStorage
+        function saveInquiry(inquiryData) {
+            let inquiries = JSON.parse(localStorage.getItem('inquiries') || '[]');
+            inquiries.unshift(inquiryData); // 添加到数组开头
+            localStorage.setItem('inquiries', JSON.stringify(inquiries));
+        }
+        
+        // 加载询价记录
+        function loadInquiries() {
+            const inquiriesList = document.getElementById('inquiries-list');
+            const emptyInquiries = document.getElementById('empty-inquiries');
+            const inquiries = JSON.parse(localStorage.getItem('inquiries') || '[]');
+            
+            // 清空当前列表
+            inquiriesList.innerHTML = '';
+            
+            if (inquiries.length === 0) {
+                inquiriesList.appendChild(emptyInquiries);
+                emptyInquiries.classList.remove('hidden');
+                return;
+            }
+            
+            emptyInquiries.classList.add('hidden');
+            
+            // 添加询价记录
+            inquiries.forEach((inquiry, index) => {
+                const inquiryItem = document.createElement('div');
+                inquiryItem.className = 'bg-gray-50 p-4 rounded-lg inquiry-item';
+                inquiryItem.innerHTML = `
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h4 class="font-semibold">${inquiry.name}</h4>
+                            <p class="text-sm text-gray-600">${inquiry.company || '未填写公司名称'}</p>
+                        </div>
+                        <span class="text-sm text-gray-500">${inquiry.timestamp}</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-gray-500 mr-2"></i>
+                            <span>${inquiry.phone}</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-gray-500 mr-2"></i>
+                            <span>${inquiry.email}</span>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">${inquiry.product}</span>
+                    </div>
+                    <div>
+                        <p class="text-gray-700">${inquiry.message || '未填写具体需求'}</p>
+                    </div>
+                `;
+                inquiriesList.appendChild(inquiryItem);
+                
+                // 添加动画效果
+                gsap.from(inquiryItem, {
+                    duration: 0.5,
+                    opacity: 0,
+                    y: 20,
+                    delay: index * 0.1,
+                    ease: "power2.out"
+                });
+            });
+        }
+    </script>
+</body>
+</html>

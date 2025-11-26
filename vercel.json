@@ -1,0 +1,16 @@
+Json
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static" // 使用Vercel的静态文件构建器
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)", // 所有请求都指向index.html（适合单页应用）
+      "dest": "/index.html"
+    }
+  ]
+}
